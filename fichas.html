@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pixel · Ficha de Google completa y a tu nombre</title>
+<meta name="description" content="Dejamos la ficha de Google Maps de tu negocio completa, verificada y a tu nombre. En tu local o por WhatsApp, como prefieras.">
+<meta property="og:title" content="Pixel · Tu negocio completo en Google Maps">
+<meta property="og:description" content="Ficha de Google completa, verificada y a tu nombre. La hacemos con vos en tu local o por WhatsApp, como prefieras.">
+<meta property="og:image" content="https://pixelestudioia.github.io/pixel-og.png">
+<meta property="og:url" content="https://pixelestudioia.github.io/fichas.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --negro:#0a0a0a; --blanco:#fff; --gris:#f4f4f2; --texto:#1b1b1b; --suave:#5d5d5d; --linea:#e4e4e0;
+  --r:#FF2A2A; --g:#1ED760; --b:#2D6BFF;
+  --radio:18px; --max:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--texto);background:var(--blanco);line-height:1.55;font-size:17px}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+/* marca */
+.px{display:inline-flex;gap:3px}
+.px i{display:block;width:6px;height:18px}
+.px i:nth-child(1){background:var(--r)}.px i:nth-child(2){background:var(--g)}.px i:nth-child(3){background:var(--b)}
+/* header */
+header{position:sticky;top:0;z-index:10;background:var(--negro);color:var(--blanco)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:26px;letter-spacing:.5px;text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--g);color:#06210f;font-weight:800;text-decoration:none;padding:13px 22px;border-radius:999px;font-size:16px;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:20px;height:20px}
+header .btn{padding:9px 16px;font-size:15px}
+/* hero */
+.hero{background:var(--negro);color:var(--blanco);padding:64px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:#cfcfcf;font-size:15px;margin-bottom:18px}
+h1{font-size:clamp(34px,5.2vw,58px);line-height:1.08;font-weight:900;letter-spacing:-.5px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--r),var(--g),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:20px;color:#d9d9d9;margin:22px 0 30px;max-width:34ch}
+.precio-chip{margin-top:18px;color:#bdbdbd;font-size:15px}
+.precio-chip b{color:var(--blanco)}
+/* mock ficha */
+.ficha{background:var(--blanco);color:var(--texto);border-radius:var(--radio);padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.ficha .fotos{display:grid;grid-template-columns:2fr 1fr;gap:6px;height:130px;margin-bottom:14px}
+.ficha .fotos div{border-radius:10px}
+.f1{background:linear-gradient(135deg,#f6c9b8,#d98f7c)}.f2{background:linear-gradient(135deg,#c9d8f6,#7c9ad9)}
+.ficha h3{font-size:20px;font-weight:800}
+.estrellas{color:#e7a500;font-size:14px;letter-spacing:1px}
+.estrellas span{color:var(--suave);letter-spacing:0;margin-left:4px}
+.ficha ul{list-style:none;margin-top:12px;display:grid;gap:7px;font-size:15px}
+.ficha li{display:flex;gap:9px;align-items:flex-start}
+.ok{color:#14a44d;font-weight:900}
+.tag-ej{display:inline-block;font-size:12px;font-weight:700;color:var(--suave);background:var(--gris);border-radius:6px;padding:2px 8px;margin-bottom:10px}
+/* secciones */
+section{padding:84px 0}
+section.gris{background:var(--gris)}
+h2{font-size:clamp(28px,3.6vw,40px);font-weight:900;line-height:1.15;margin-bottom:14px;letter-spacing:-.3px}
+.sub{color:var(--suave);font-size:18px;max-width:58ch;margin-bottom:40px}
+/* antes / despues */
+.ad{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:24px}
+.card h3{font-size:19px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.card ul{list-style:none;display:grid;gap:9px}
+.card li{display:flex;gap:10px}
+.mal{color:#d33;font-weight:900}
+.pill{font-size:12px;font-weight:800;border-radius:999px;padding:3px 10px}
+.pill.antes{background:#ffe3e3;color:#a11}.pill.despues{background:#dcf7e6;color:#0b6b33}
+/* incluye */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.item{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:20px}
+.item .ic{width:34px;height:34px;border-radius:9px;margin-bottom:12px}
+.item:nth-child(3n+1) .ic{background:var(--r)}.item:nth-child(3n+2) .ic{background:var(--g)}.item:nth-child(3n) .ic{background:var(--b)}
+.item h3{font-size:17px;font-weight:800;margin-bottom:4px}
+.item p{font-size:15px;color:var(--suave)}
+/* pasos */
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:p}
+.paso{position:relative;padding-top:56px}
+.paso::before{counter-increment:p;content:counter(p);position:absolute;top:0;left:0;width:42px;height:42px;border-radius:10px;background:var(--negro);color:var(--blanco);font-weight:900;font-size:20px;display:grid;place-items:center}
+.paso h3{font-size:18px;font-weight:800;margin-bottom:6px}
+.paso p{color:var(--suave);font-size:15.5px}
+.paso .quien{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--texto);background:var(--gris);padding:3px 9px;border-radius:6px}
+/* precios */
+.precios{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
+.plan{border-radius:var(--radio);padding:30px;border:1px solid var(--linea);background:var(--blanco)}
+.plan.dest{background:var(--negro);color:var(--blanco);border:none}
+.plan h3{font-size:20px;font-weight:800}
+.monto{font-size:46px;font-weight:900;margin:8px 0 2px;letter-spacing:-1px}
+.monto small{font-size:17px;font-weight:700;opacity:.75;letter-spacing:0}
+.plan .nota{opacity:.8;font-size:15px;margin-bottom:18px}
+.plan ul{list-style:none;display:grid;gap:8px;margin-bottom:24px}
+.plan li{display:flex;gap:10px}
+.plan.dest .ok{color:var(--g)}
+/* confianza */
+.conf{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.conf div{border-left:4px solid var(--negro);padding:4px 0 4px 16px}
+.conf div:nth-child(1){border-color:var(--r)}.conf div:nth-child(2){border-color:var(--g)}.conf div:nth-child(3){border-color:var(--b)}
+.conf h3{font-size:17px;font-weight:800;margin-bottom:4px}
+.conf p{color:var(--suave);font-size:15px}
+/* faq */
+.faq{max-width:760px}
+details{border-bottom:1px solid var(--linea);padding:18px 0}
+summary{cursor:pointer;font-weight:800;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;line-height:1;color:var(--suave)}
+details[open] summary::after{content:"–"}
+details p{color:var(--suave);margin-top:10px}
+/* cta final */
+.cta{background:var(--negro);color:var(--blanco);text-align:center}
+.cta p{color:#cfcfcf;font-size:19px;margin:10px auto 30px;max-width:46ch}
+footer{background:var(--negro);color:#9a9a9a;font-size:14px;padding:26px 0 40px;border-top:1px solid #222}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* whatsapp flotante */
+.flot{position:fixed;right:18px;bottom:18px;z-index:20;width:58px;height:58px;border-radius:50%;background:var(--g);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.flot svg{width:30px;height:30px}
+/* responsive */
+@media (max-width:900px){
+  .hero .wrap,.ad,.precios{grid-template-columns:1fr}
+  .grid4,.pasos,.conf{grid-template-columns:1fr 1fr}
+  .hero{padding:44px 0 64px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .grid4,.pasos,.conf{grid-template-columns:1fr}
+  section{padding:60px 0}
+  header .btn span{display:none}
+  .hero p.lead{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Pixel, inicio">
+      <span class="px" aria-hidden="true"><i></i><i></i><i></i></span>pixel
+    </a>
+    <a class="btn wa" href="#" data-msg="Hola, quiero saber cómo quedaría la ficha de Google de mi negocio.">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+      <span>Escribinos</span>
+    </a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker"><span class="px" aria-hidden="true"><i></i><i></i><i></i></span>Ficha de Google para tu negocio</div>
+      <h1>Que te encuentren en Google <em>y te elijan a vos</em>.</h1>
+      <p class="lead">Dejamos la ficha de tu negocio en Google Maps completa, verificada y a tu nombre. La hacemos con vos en tu local o por WhatsApp, como prefieras.</p>
+      <a class="btn wa" href="#" data-msg="Hola, quiero saber cómo quedaría la ficha de Google de mi negocio.">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+        Quiero ver cómo quedaría mi ficha
+      </a>
+      <p class="precio-chip"><b>$100.000, una sola vez.</b> La mitad al empezar, la mitad cuando está lista.</p>
+    </div>
+    <div class="ficha" aria-label="Ejemplo de ficha completa">
+      <span class="tag-ej">Ejemplo ilustrativo</span>
+      <div class="fotos"><div class="f1"></div><div class="f2"></div></div>
+      <h3>Tu Peluquería</h3>
+      <div class="estrellas">★★★★★<span>4,8 · Peluquería</span></div>
+      <ul>
+        <li><span class="ok">✓</span>Abierto · Cierra a las 20</li>
+        <li><span class="ok">✓</span>WhatsApp y link para pedir turno</li>
+        <li><span class="ok">✓</span>Fotos propias del local y los trabajos</li>
+        <li><span class="ok">✓</span>Reseñas respondidas por el dueño</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="gris" id="antes-despues">
+  <div class="wrap">
+    <h2>Lo que ve un cliente nuevo cuando te busca</h2>
+    <p class="sub">El que no te conoce busca desde el celular y elige en segundos. Entre una ficha a medias y una completa, elige la completa.</p>
+    <div class="ad">
+      <div class="card">
+        <h3><span class="pill antes">Antes</span>Ficha abandonada</h3>
+        <ul>
+          <li><span class="mal">✕</span>"¿Es el propietario de esta empresa?": nadie la reclamó</li>
+          <li><span class="mal">✕</span>Sin horarios, o con horarios viejos</li>
+          <li><span class="mal">✕</span>Solo fotos que subió algún cliente</li>
+          <li><span class="mal">✕</span>Sin WhatsApp ni Instagram</li>
+          <li><span class="mal">✕</span>Reseñas sin respuesta</li>
+          <li><span class="mal">✕</span>Categoría mal cargada: no aparece en la búsqueda correcta</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><span class="pill despues">Después</span>Ficha completa y tuya</h3>
+        <ul>
+          <li><span class="ok">✓</span>Reclamada y verificada a tu nombre, con tu cuenta</li>
+          <li><span class="ok">✓</span>Horarios al día, también los de temporada</li>
+          <li><span class="ok">✓</span>Fotos propias del local, el equipo y los trabajos</li>
+          <li><span class="ok">✓</span>WhatsApp, Instagram y link para turnos</li>
+          <li><span class="ok">✓</span>Descripción y servicios claros</li>
+          <li><span class="ok">✓</span>Categorías correctas para que te encuentren</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="incluye">
+  <div class="wrap">
+    <h2>Qué incluye</h2>
+    <p class="sub">Un trabajo de una sola vez. Al terminar, la ficha queda lista y es tuya.</p>
+    <div class="grid4">
+      <div class="item"><div class="ic"></div><h3>Reclamo y verificación</h3><p>Te guiamos paso a paso para que la ficha quede a tu nombre.</p></div>
+      <div class="item"><div class="ic"></div><h3>Datos y horarios</h3><p>Dirección, teléfono, horarios normales y de temporada.</p></div>
+      <div class="item"><div class="ic"></div><h3>Fotos</h3><p>Elegimos y cargamos las mejores fotos de tu local y tus trabajos.</p></div>
+      <div class="item"><div class="ic"></div><h3>Descripción</h3><p>Un texto claro sobre qué hacés y por qué elegirte.</p></div>
+      <div class="item"><div class="ic"></div><h3>Servicios</h3><p>Lista de servicios, con precio si querés mostrarlo.</p></div>
+      <div class="item"><div class="ic"></div><h3>Categorías</h3><p>Las correctas, para aparecer cuando te buscan.</p></div>
+      <div class="item"><div class="ic"></div><h3>Contacto directo</h3><p>WhatsApp, Instagram y link de turnos a un toque.</p></div>
+      <div class="item"><div class="ic"></div><h3>Primera publicación</h3><p>Una novedad publicada para arrancar con la ficha activa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gris" id="como">
+  <div class="wrap">
+    <h2>Cómo funciona</h2>
+    <p class="sub">En tu local o por WhatsApp, como te quede mejor. Lo único que hacés vos lleva unos 20 minutos en total.</p>
+    <div class="pasos">
+      <div class="paso"><h3>Nos escribís</h3><p>Te mandamos cómo se ve hoy tu ficha y qué le falta.</p><span class="quien">2 minutos</span></div>
+      <div class="paso"><h3>Nos mandás el material</h3><p>Fotos, horarios y servicios, directo por WhatsApp.</p><span class="quien">10 minutos</span></div>
+      <div class="paso"><h3>Verificás la ficha</h3><p>Google pide un video corto del local. Te decimos exactamente qué filmar.</p><span class="quien">10 minutos</span></div>
+      <div class="paso"><h3>La dejamos lista</h3><p>Cargamos todo y te mostramos el antes y el después.</p><span class="quien">Lo hacemos nosotros</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="precios">
+  <div class="wrap">
+    <h2>Precio claro, sin sorpresas</h2>
+    <p class="sub">Sin contratos ni permanencia.</p>
+    <div class="precios">
+      <div class="plan dest">
+        <h3>Puesta a punto de la ficha</h3>
+        <div class="monto">$100.000 <small>una sola vez</small></div>
+        <p class="nota">$50.000 para empezar y $50.000 cuando está lista.</p>
+        <ul>
+          <li><span class="ok">✓</span>Todo lo de "Qué incluye"</li>
+          <li><span class="ok">✓</span>La ficha queda a tu nombre</li>
+          <li><span class="ok">✓</span>En tu local o a distancia</li>
+        </ul>
+        <a class="btn wa" href="#" data-msg="Hola, me interesa la puesta a punto de la ficha de Google de mi negocio.">Arrancar</a>
+      </div>
+      <div class="plan">
+        <h3>Mantenimiento mensual <span style="font-weight:600;color:var(--suave)">(opcional)</span></h3>
+        <div class="monto">$35.000 <small>a $50.000 / mes</small></div>
+        <p class="nota">Para tener la ficha siempre activa.</p>
+        <ul>
+          <li><span class="ok">✓</span>Respuesta a las reseñas</li>
+          <li><span class="ok">✓</span>Cambios de horario y feriados</li>
+          <li><span class="ok">✓</span>Publicaciones con novedades</li>
+          <li><span class="ok">✓</span>Lo das de baja cuando quieras</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gris" id="confianza">
+  <div class="wrap">
+    <h2>Trabajamos así</h2>
+    <p class="sub">Para que no tengas que confiar a ciegas.</p>
+    <div class="conf">
+      <div><h3>La ficha es tuya</h3><p>Queda en tu cuenta de Google. Si un día dejamos de trabajar juntos, sigue siendo tuya.</p></div>
+      <div><h3>Nunca tu contraseña</h3><p>Vos reclamás la ficha y nos sumás como ayudantes. No te pedimos claves.</p></div>
+      <div><h3>Pagás la mitad al final</h3><p>El segundo pago es recién cuando ves la ficha terminada.</p></div>
+      <div><h3>Sin promesas mágicas</h3><p>No prometemos el doble de clientes. Prometemos una ficha completa y verificada.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="wrap"><div class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Cuánto tarda?</summary><p>Nuestra parte lleva pocos días. La verificación depende de Google y puede tardar desde algunos días hasta un par de semanas. Por eso conviene arrancar cuanto antes.</p></details>
+    <details><summary>¿Lo podemos hacer en persona?</summary><p>Sí. Vamos a tu local y la dejamos lista juntos, incluido el video que pide Google. Si preferís, también se resuelve todo por WhatsApp.</p></details>
+    <details><summary>¿Qué tengo que hacer yo?</summary><p>Mandarnos fotos, horarios y servicios por WhatsApp, y grabar un video corto del local cuando Google lo pida. En total, unos 20 minutos.</p></details>
+    <details><summary>¿Y si mi negocio no aparece en Google Maps?</summary><p>Mejor todavía: la creamos desde cero, ya completa y a tu nombre.</p></details>
+    <details><summary>¿Y si ya tengo la ficha reclamada?</summary><p>Igual la podemos completar y mejorar. Nos sumás como administradores desde tu cuenta y listo.</p></details>
+    <details><summary>¿Me garantizan más clientes?</summary><p>No. Nadie puede prometer eso con honestidad. Lo que garantizamos es el trabajo: una ficha completa, verificada y bien cargada, que es lo que mira la gente antes de elegir.</p></details>
+    <details><summary>¿Cómo se paga?</summary><p>Por transferencia: la mitad para empezar y la otra mitad cuando la ficha está lista.</p></details>
+  </div></div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>¿Querés ver cómo quedaría tu ficha?</h2>
+    <p>Escribinos y te mandamos cómo se ve hoy y qué le falta. Sin compromiso.</p>
+    <a class="btn wa" href="#" data-msg="Hola, quiero saber cómo quedaría la ficha de Google de mi negocio.">Escribinos por WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="px" aria-hidden="true" style="vertical-align:middle;margin-right:8px"><i></i><i></i><i></i></span>Pixel · Estudio digital</div>
+    <div><a href="index.html" style="color:#cfcfcf">Ver todos los servicios</a></div>
+  </div>
+</footer>
+
+<a class="flot wa" href="#" aria-label="Escribinos por WhatsApp" data-msg="Hola, quiero saber cómo quedaría la ficha de Google de mi negocio.">
+  <svg viewBox="0 0 24 24" fill="#06210f" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+</a>
+
+<script>
+// Número de WhatsApp de Pixel: código de país 54 + 9 + código de área sin 0 + número sin 15. Ejemplo: 5492255123456
+const WHATSAPP = "5492255601758";
+document.querySelectorAll('a.wa').forEach(a => {
+  a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg || "Hola");
+  a.target = "_blank"; a.rel = "noopener";
+});
+</script>
+</body>
+</html>
